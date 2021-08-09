@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { getProjectById, getAllProjects } from "../../../lib/api";
 
 const project = ({ project }) => {
