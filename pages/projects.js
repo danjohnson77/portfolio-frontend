@@ -15,7 +15,11 @@ const projects = ({ projects }) => {
 };
 
 export async function getServerSideProps() {
-  const res = await axios.get("http://localhost:3000/api/projects");
+  const res = await axios.get(
+    `${
+      process.env.NODE_ENV === "development" && "http://localhost:3000"
+    }/api/projects`
+  );
   const projects = res.data;
 
   return { props: { projects } };
