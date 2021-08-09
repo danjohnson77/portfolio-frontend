@@ -1,4 +1,4 @@
-import axios from "axios";
+import { getAllProjects } from "../lib/api";
 
 const projects = ({ projects }) => {
   return (
@@ -14,15 +14,10 @@ const projects = ({ projects }) => {
   );
 };
 
-export async function getServerSideProps() {
-  const res = await axios.get(
-    `${
-      process.env.NODE_ENV === "development" && "http://localhost:3000"
-    }/api/projects`
-  );
-  const projects = res.data;
+export async function getStaticProps() {
+  const projects = await getAllProjects();
 
-  return { props: { projects } };
+  return { props: { projects }, revalidate: 10 };
 }
 
 export default projects;
