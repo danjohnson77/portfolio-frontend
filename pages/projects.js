@@ -1,27 +1,19 @@
 import { getAllProjects } from "../lib/api";
 import Image from "next/image";
 import Link from "next/link";
+import SpacedText from "../components/SpacedText";
 
 const projects = ({ projects }) => {
   return (
     <div className="panel p-10 tracking-widest md:w-10/12">
-      <div className="section-header pb-10">
-        <span>P</span>
-        <span>R</span>
-        <span>O</span>
-        <span>J</span>
-        <span>E</span>
-        <span>C</span>
-        <span>T</span>
-        <span>S</span>
-      </div>
+      <SpacedText text="PROJECTS" classes="pb-10" />
       <div className="flex flex-col w-full">
         {projects.map((project, index) => {
           const { title, subtitle, mainImage, id } = project;
 
           return (
-            <Link href={`/project/${id}`}>
-              <div className="flex w-full mb-10" key={index}>
+            <Link href={`/project/${id}`} key={index}>
+              <div className="flex w-full mb-10">
                 <div className="flex relative w-3/12 h-24">
                   <Image
                     src={mainImage.url}
