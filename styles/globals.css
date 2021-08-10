@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+html {
+  background: url("/bg.jpg") no-repeat center center fixed;
+}
+
+@layer base {
+  h1 {
+    @apply text-6xl font-heading;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-black bg-opacity-50 rounded-md  flex flex-col items-center w-full min-h-screen md:min-h-0  text-5xl;
+  }
+
+  .section-header {
+    @apply flex w-full mx-auto justify-between;
+  }
+
+  .nav-item-landing {
+    @apply flex flex-col items-center hover:text-black hover:bg-white transform hover:scale-110 transition-all duration-200 rounded-md p-2 cursor-pointer;
+  }
+
+  .nav-item-landing > i {
+    @apply pb-2;
+  }
+
+  .nav-item {
+    @apply hover:text-gray-300 transition-all transform hover:scale-125 text-white cursor-pointer tracking-widest duration-200 text-lg;
+  }
+}

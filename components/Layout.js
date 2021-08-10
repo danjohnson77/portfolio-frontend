@@ -6,7 +6,9 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <Nav />
-      <main>{children}</main>
+      <main className="flex flex-col min-h-screen text-white items-center md:pt-24">
+        {children}
+      </main>
     </>
   );
 };
