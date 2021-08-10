@@ -1,6 +1,5 @@
 import { getProjectById, getAllProjects } from "../../../lib/api";
 import Image from "next/image";
-import SpacedText from "../../../components/SpacedText";
 
 const project = ({ project }) => {
   const {

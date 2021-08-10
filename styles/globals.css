@@ -37,4 +37,23 @@ html {
   .nav-item {
     @apply hover:text-gray-300 transition-all transform hover:scale-125 text-white cursor-pointer tracking-widest duration-200 text-lg;
   }
+
+  .hover-glow {
+    cursor: pointer;
+  }
+
+  .hover-glow-item {
+    transition: box-shadow 0.5s, transform 0.25s;
+  }
+  .hover-glow-text {
+    transition: text-shadow 0.5s;
+  }
+
+  .hover-glow:hover .hover-glow-item {
+    box-shadow: 0px 0px 30px #fff;
+    transform: scale(1.05);
+  }
+  .hover-glow:hover .hover-glow-text {
+    text-shadow: 0px 0px 15px #fff;
+  }
 }

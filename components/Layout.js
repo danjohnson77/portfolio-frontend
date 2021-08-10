@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <Nav />
-      <main className="flex flex-col min-h-screen text-white items-center md:pt-24">
+      <main className="flex flex-col min-h-screen text-white items-center md:py-24">
         {children}
       </main>
     </>
