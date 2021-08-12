@@ -35,7 +35,7 @@ html {
   }
 
   .nav-item {
-    @apply hover:text-gray-300 transition-all transform hover:scale-125 text-white cursor-pointer tracking-widest duration-200 text-lg;
+    @apply hover:text-gray-300 transition-all transform hover:scale-125 text-white cursor-pointer tracking-widest duration-200 text-2xl md:text-lg py-12 md:py-0;
   }
 
   .hover-glow {
@@ -51,7 +51,7 @@ html {
 
   .hover-glow:hover .hover-glow-item {
     box-shadow: 0px 0px 30px #fff;
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
   .hover-glow:hover .hover-glow-text {
     text-shadow: 0px 0px 15px #fff;

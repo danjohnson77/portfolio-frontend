@@ -24,7 +24,7 @@ const projects = ({ projects }) => {
                       objectFit="contain"
                     />
                   </div>
-                  <div className="flex flex-col font-subheading text-lg  justify-center text-center md:px-10 md:w-6/12 ">
+                  <div className="flex flex-col font-subheading text-lg  justify-center text-center md:px-10 md:w-6/12 mt-5">
                     <h2 className="hover-glow-text">{title}</h2>
                     <p className="text-sm  hover-glow-text">{subtitle}</p>
                   </div>

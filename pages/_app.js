@@ -19,7 +19,7 @@ const MyApp = ({ Component, pageProps, router }) => {
     gsap.to(node, {
       duration: 0.2,
       autoAlpha: 0,
-      x: -window.innerWidth,
+
       ease: "power1.in",
     });
   };

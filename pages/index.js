@@ -7,9 +7,9 @@ export default function Home() {
       <SpacedText text="DANIEL" classes="pb-10 md:w-10/12 mx-auto" />
       <SpacedText text="JOHNSON" classes="md:w-10/12 mx-auto" />
 
-      <div className="flex font-subheading justify-between text-3xl py-10 tracking-widest w-full md:w-10/12 mx-auto flex-col md:flex-row">
-        <SpacedText text="FULL-STACK " />
-
+      <div className="flex font-subheading justify-between text-3xl py-10 tracking-widest w-full md:w-10/12 mx-auto flex-col">
+        <SpacedText text="FULL-STACK" />
+        &nbsp;
         <SpacedText text="WEB DEVELOPER" />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full lg:flex text-4xl font-subheading lg:w-10/12 justify-between">

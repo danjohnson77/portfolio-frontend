@@ -1,5 +1,3 @@
-import React from "react";
-
 const SpacedText = ({ text, classes }) => {
   const splitText = text.split("");
 
