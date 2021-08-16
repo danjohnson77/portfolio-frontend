@@ -15,7 +15,7 @@ const projects = ({ projects }) => {
     <div className="panel p-10 tracking-widest md:w-10/12">
       <SpacedText
         text="PROJECTS"
-        classes="pb-10"
+        classes="py-5"
         animateClass="projects-ani"
         alternateAnimation={true}
       />
@@ -26,7 +26,7 @@ const projects = ({ projects }) => {
           return (
             <div key={index}>
               <Link href={`/project/${id}`}>
-                <div className="flex flex-col w-full md:flex-row py-10 hover-glow">
+                <div className="flex flex-col w-full md:flex-row hover-glow">
                   <div className="flex relative h-64 md:w-6/12 hover-glow-item">
                     <Image
                       src={mainImage.url}

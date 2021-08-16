@@ -6,6 +6,24 @@ const Nav = () => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
+    const tl = gsap.timeline({ repeat: 0 });
+    const duration = 0.4;
+
+    if (!open) {
+      tl.to(".nav-line-top", { duration, top: "50%", rotate: 405 });
+      tl.to(".nav-line-bottom", { duration, top: "50%", rotate: 315 }, 0);
+      tl.to(".nav-line-middle", { duration, autoAlpha: 0 }, 0);
+    } else {
+      tl.to(".nav-line-top", { duration, rotate: 0 });
+      tl.to(".nav-line-bottom", { duration, rotate: 0 }, 0);
+      tl.to(".nav-line-middle", { duration, autoAlpha: 1 }, 0);
+
+      tl.add("end", 0.3);
+
+      tl.to(".nav-line-top", { top: 0 }, "end");
+      tl.to(".nav-line-bottom", { top: "100%" }, "end");
+    }
+
     gsap.from(".nav-item", {
       duration: 0.2,
 
@@ -16,19 +34,21 @@ const Nav = () => {
   return (
     <nav className="md:pt-10">
       <div
-        className="flex justify-between h-5 fixed flex-col z-50 md:hidden m-3 cursor-pointer"
+        className="flex fixed flex-col z-50 md:hidden m-3 cursor-pointer w-10 justify-center"
         onClick={handleClick}
       >
-        <div className="h-px bg-white w-10"></div>
-        <div className="h-px bg-white w-10"></div>
-        <div className="h-px bg-white w-10"></div>
+        <div className={`nav-box`}>
+          <div className={`nav-line nav-line-top`}></div>
+          <div className={`nav-line nav-line-middle top-1/2`}></div>
+          <div className={`nav-line nav-line-bottom top-full`}></div>
+        </div>
       </div>
 
       <div
         className={`w-screen md:w-full fixed md:relative min-h-screen md:min-h-0 z-20 bg-black md:bg-transparent justify-center flex ${
           !open && "hidden md:flex"
         }`}
-        onClick={() => setOpen(false)}
+        onClick={() => handleClick()}
       >
         <ul className="flex justify-between flex-col w-full md:flex-row md:w-10/12 items-center">
           <Link href="/">

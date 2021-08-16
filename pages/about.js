@@ -1,45 +1,46 @@
 import { useEffect } from "react";
 import SpacedText from "../components/SpacedText";
 import { headerAnimation } from "../lib/animations";
+import { getAbout } from "../lib/api";
+import Image from "next/image";
 
-const about = () => {
+const about = ({ about }) => {
   useEffect(() => {
     headerAnimation([".about-ani"], 0.75, "circ.out");
   }, []);
+
+  const { title, body, aboutImage } = about;
+  const md = require("markdown-it")({ breaks: true });
+
   return (
     <div className="panel md:w-10/12">
-      <div className="flex flex-col md:flex-row h-full justify-between w-10/12">
+      <div className="flex flex-col lg:flex-row h-full justify-between w-10/12">
         <div className="flex justify-center items-center py-10">
-          <div className="overflow-hidden rounded-full w-48 h-48"></div>
+          <div className="overflow-hidden rounded-full w-48 h-48 relative">
+            <Image src={aboutImage.url} layout="fill" objectFit="contain" />
+          </div>
         </div>
-        <div className="flex flex-col md:w-9/12 md:p-10">
+        <div className="flex flex-col lg:w-9/12 lg:p-10">
           <SpacedText
-            text="ABOUT ME"
-            classes="pb-10"
+            text={title.toUpperCase()}
+            classes="py-5"
             animateClass="about-ani"
             alternateAnimation={true}
           />
-          <div className="text-sm leading-7 tracking-widest font-subheading">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-              praesentium odit aliquid enim sit. Corporis dolores dicta quod
-              aliquid rem facere est nisi, expedita magni in saepe culpa ullam
-              sint ex sunt iure numquam voluptates. Optio voluptatum veniam
-              maiores dolorem dolor mollitia dicta illo consequuntur placeat
-              pariatur vitae, eius voluptatem.
-            </p>
-            <br />
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus nesciunt laudantium aut culpa esse corrupti magnam
-              tempore reprehenderit. Optio iure velit voluptates harum quo vel
-              rerum fugiat cum temporibus adipisci.
-            </p>
-          </div>
+          <div
+            className="text-sm leading-7 tracking-widest font-subheading py-5"
+            dangerouslySetInnerHTML={{ __html: md.render(body) }}
+          ></div>
         </div>
       </div>
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const about = await getAbout();
+
+  return { props: { about }, revalidate: 10 };
+}
 
 export default about;

@@ -12,6 +12,8 @@ const project = ({ project }) => {
     frontend,
     backend,
   } = project;
+  const md = require("markdown-it")();
+
   return (
     <div className="panel md:w-10/12 font-subheading px-10 md:px-0 md:py-10">
       <div className="py-5 md:py-0">
@@ -36,9 +38,10 @@ const project = ({ project }) => {
 
         <div className="bg-white h-px w-full md:w-px md:h-96 md:my-5 hidden md:flex"></div>
 
-        <div className="flex flex-col items-center py-10 md:w-6/12  md:justify-center md:px-5">
-          <p className="text-sm">{description}</p>
-        </div>
+        <div
+          className="flex flex-col items-center py-10 md:w-6/12  md:justify-center md:px-5 text-lg"
+          dangerouslySetInnerHTML={{ __html: md.render(description) }}
+        ></div>
       </div>
     </div>
   );
