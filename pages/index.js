@@ -1,18 +1,54 @@
 import Link from "next/link";
 import SpacedText from "../components/SpacedText";
+import { useEffect } from "react";
+import { headerAnimation } from "../lib/animations";
+import gsap from "gsap";
 
 export default function Home() {
+  useEffect(() => {
+    headerAnimation(
+      [".first-name-ani", ".last-name-ani", ".full-stack-ani", ".web-dev-ani"],
+      0.75,
+      "circ.out"
+    );
+
+    gsap.from(".link-ani", {
+      duration: 1,
+      autoAlpha: 0,
+      ease: "circ.out",
+      delay: 0.2,
+    });
+  }, []);
+
   return (
     <div className="panel md:text-6xl md:w-10/12 w-full min-h-screen md:min-h-0 pt-24 px-10 md:p-10">
-      <SpacedText text="DANIEL" classes="pb-10 md:w-10/12 mx-auto" />
-      <SpacedText text="JOHNSON" classes="md:w-10/12 mx-auto" />
+      <SpacedText
+        text="DANIEL"
+        classes="pb-10 md:w-10/12 mx-auto overflow-hidden"
+        animateClass="first-name-ani"
+        alternateAnimation={true}
+      />
+      <SpacedText
+        text="JOHNSON"
+        classes="md:w-10/12 mx-auto overflow-hidden"
+        animateClass="last-name-ani"
+        alternateAnimation={true}
+      />
 
       <div className="flex font-subheading justify-between text-3xl py-10 tracking-widest w-full md:w-10/12 mx-auto flex-col">
-        <SpacedText text="FULL-STACK" />
+        <SpacedText
+          text="FULL-STACK"
+          animateClass="full-stack-ani"
+          alternateAnimation={true}
+        />
         &nbsp;
-        <SpacedText text="WEB DEVELOPER" />
+        <SpacedText
+          text="WEB DEVELOPER"
+          animateClass="web-dev-ani"
+          alternateAnimation={true}
+        />
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full lg:flex text-4xl font-subheading lg:w-10/12 justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full lg:flex text-4xl font-subheading lg:w-10/12 justify-between link-ani">
         <Link href="/projects">
           <div className="nav-item-landing">
             <i className="fas fa-code"></i>

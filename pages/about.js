@@ -1,7 +1,11 @@
-import Image from "next/image";
+import { useEffect } from "react";
 import SpacedText from "../components/SpacedText";
+import { headerAnimation } from "../lib/animations";
 
 const about = () => {
+  useEffect(() => {
+    headerAnimation([".about-ani"], 0.75, "circ.out");
+  }, []);
   return (
     <div className="panel md:w-10/12">
       <div className="flex flex-col md:flex-row h-full justify-between w-10/12">
@@ -9,7 +13,12 @@ const about = () => {
           <div className="overflow-hidden rounded-full w-48 h-48"></div>
         </div>
         <div className="flex flex-col md:w-9/12 md:p-10">
-          <SpacedText text="ABOUT ME" classes="pb-10" />
+          <SpacedText
+            text="ABOUT ME"
+            classes="pb-10"
+            animateClass="about-ani"
+            alternateAnimation={true}
+          />
           <div className="text-sm leading-7 tracking-widest font-subheading">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed

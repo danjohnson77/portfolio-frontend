@@ -2,13 +2,23 @@ import { getAllProjects } from "../lib/api";
 import Image from "next/image";
 import Link from "next/link";
 import SpacedText from "../components/SpacedText";
+import { headerAnimation } from "../lib/animations";
+import { useEffect } from "react";
 
 const projects = ({ projects }) => {
   let count = projects.length;
+  useEffect(() => {
+    headerAnimation([".projects-ani"], 0.75, "circ.out");
+  }, []);
 
   return (
     <div className="panel p-10 tracking-widest md:w-10/12">
-      <SpacedText text="PROJECTS" classes="pb-10" />
+      <SpacedText
+        text="PROJECTS"
+        classes="pb-10"
+        animateClass="projects-ani"
+        alternateAnimation={true}
+      />
       <div className="flex flex-col w-full">
         {projects.map((project, index) => {
           const { title, subtitle, mainImage, id } = project;

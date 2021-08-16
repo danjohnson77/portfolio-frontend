@@ -25,7 +25,7 @@ const Nav = () => {
       </div>
 
       <div
-        className={`w-screen fixed md:relative min-h-screen md:min-h-0 z-20 bg-black md:bg-transparent justify-center flex ${
+        className={`w-screen md:w-full fixed md:relative min-h-screen md:min-h-0 z-20 bg-black md:bg-transparent justify-center flex ${
           !open && "hidden md:flex"
         }`}
         onClick={() => setOpen(false)}
