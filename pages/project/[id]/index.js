@@ -50,7 +50,7 @@ const project = ({ project }) => {
 export async function getStaticProps({ params }) {
   const project = await getProjectById(params.id);
 
-  return { props: { project } };
+  return { props: { project }, revalidate: 10 };
 }
 
 export async function getStaticPaths() {
