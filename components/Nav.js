@@ -61,17 +61,32 @@ const Nav = () => {
             <li className="nav-item">ABOUT ME</li>
           </Link>
           <div className="flex flex-row justify-between w-36">
-            <a href="https://github.com/danjohnson77" target="_blank">
+            <a
+              href="https://github.com/danjohnson77"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Github Link"
+            >
               <li className="nav-item">
                 <i className="fab fa-github"></i>
               </li>
             </a>
-            <a href="https://www.linkedin.com/in/danjohnson77/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/danjohnson77/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linked In Link"
+            >
               <li className="nav-item">
                 <i className="fab fa-linkedin"></i>
               </li>
             </a>
-            <a href="https://www.twitter.com/dfjdeveloper" target="_blank">
+            <a
+              href="https://www.twitter.com/dfjdeveloper"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter Link"
+            >
               <li className="nav-item">
                 <i className="fab fa-twitter"></i>
               </li>

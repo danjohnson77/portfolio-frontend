@@ -10,7 +10,7 @@ const about = ({ about }) => {
   }, []);
 
   const { title, body, aboutImage } = about;
-  const md = require("markdown-it")({ breaks: true });
+  const md = require("markdown-it")({ html: true, breaks: true });
 
   return (
     <div className="panel md:w-10/12">
@@ -28,7 +28,7 @@ const about = ({ about }) => {
             alternateAnimation={true}
           />
           <div
-            className="text-sm leading-7 tracking-widest font-subheading py-5"
+            className="text-sm leading-7 tracking-widest font-subheading py-5 about-body"
             dangerouslySetInnerHTML={{ __html: md.render(body) }}
           ></div>
         </div>

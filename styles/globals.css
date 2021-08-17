@@ -64,4 +64,9 @@ html {
   .nav-box {
     @apply relative h-10;
   }
+
+  .about-body > p,
+  .project-body > p {
+    @apply py-5;
+  }
 }

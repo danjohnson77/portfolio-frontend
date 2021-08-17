@@ -20,7 +20,7 @@ const project = ({ project }) => {
         <h1 className="text-4xl">{title}</h1>
         <h2 className="text-center text-sm">{subtitle}</h2>
       </div>
-      <div className="flex flex-col md:flex-row justify-between w-full">
+      <div className="flex flex-col md:flex-row justify-between w-full items-center">
         <div className="flex md:w-6/12 px-5">
           <div className="flex flex-col relative w-full justify-center">
             <div className="text-lg text-center py-5">
@@ -39,7 +39,7 @@ const project = ({ project }) => {
         <div className="bg-white h-px w-full md:w-px md:h-96 md:my-5 hidden md:flex"></div>
 
         <div
-          className="flex flex-col items-center py-10 md:w-6/12  md:justify-center md:px-5 text-lg"
+          className="flex flex-col items-center py-10 md:w-6/12  md:justify-center md:px-5 text-sm project-body"
           dangerouslySetInnerHTML={{ __html: md.render(description) }}
         ></div>
       </div>

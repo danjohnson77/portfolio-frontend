@@ -61,19 +61,34 @@ export default function Home() {
             <p className="text-sm">ABOUT ME</p>
           </div>
         </Link>
-        <a href="https://github.com/danjohnson77" target="_blank">
+        <a
+          href="https://github.com/danjohnson77"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Github Link"
+        >
           <div className="nav-item-landing">
             <i className="fab fa-github"></i>
             <p className="text-sm">GITHUB</p>
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/danjohnson77/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/danjohnson77/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linked In Link"
+        >
           <div className="nav-item-landing">
             <i className="fab fa-linkedin"></i>
             <p className="text-sm">LINKEDIN</p>
           </div>
         </a>
-        <a href="https://www.twitter.com/dfjdeveloper" target="_blank">
+        <a
+          href="https://www.twitter.com/dfjdeveloper"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter Link"
+        >
           <div className="nav-item-landing">
             <i className="fab fa-twitter"></i>
             <p className="text-sm">TWITTER</p>
