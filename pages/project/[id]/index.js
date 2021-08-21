@@ -29,9 +29,23 @@ const project = ({ project }) => {
             </div>
             <Image src={url} layout="responsive" width="16" height="9" />
             <div className="flex text-lg w-full justify-evenly py-5">
-              <a href={githubURL}>GITHUB REPO</a>
+              <a
+                href={githubURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github Link"
+              >
+                GITHUB REPO
+              </a>
               <div className="w-px bg-white"></div>
-              <a href={demoURL}>LIVE DEMO</a>
+              <a
+                href={demoURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Live Demo Link"
+              >
+                LIVE DEMO
+              </a>
             </div>
           </div>
         </div>

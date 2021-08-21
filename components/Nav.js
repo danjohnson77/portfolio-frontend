@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import gsap from "gsap";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const handleClick = () => {
     const tl = gsap.timeline({ repeat: 0 });
@@ -31,6 +33,7 @@ const Nav = () => {
     });
     setOpen(!open);
   };
+
   return (
     <nav className="md:pt-10">
       <div
@@ -52,13 +55,27 @@ const Nav = () => {
       >
         <ul className="flex justify-between flex-col w-full md:flex-row md:w-10/12 items-center">
           <Link href="/">
-            <li className="nav-item">HOME</li>
+            <li className={`nav-item ${router.asPath === "/" && "text-glow"}`}>
+              HOME
+            </li>
           </Link>
           <Link href="/projects">
-            <li className="nav-item">PROJECTS</li>
+            <li
+              className={`nav-item ${
+                router.asPath === "/projects" && "text-glow"
+              }`}
+            >
+              PROJECTS
+            </li>
           </Link>
           <Link href="/about">
-            <li className="nav-item">ABOUT ME</li>
+            <li
+              className={`nav-item ${
+                router.asPath === "/about" && "text-glow"
+              }`}
+            >
+              ABOUT ME
+            </li>
           </Link>
           <div className="flex flex-row justify-between w-36">
             <a

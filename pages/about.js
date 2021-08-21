@@ -5,7 +5,7 @@ import { getAbout } from "../lib/api";
 import Image from "next/image";
 
 const about = ({ about }) => {
-  const [current, setCurrent] = useState("skills");
+  const [current, setCurrent] = useState("story");
 
   useEffect(() => {
     headerAnimation([".about-ani"], 0.75, "circ.out");
