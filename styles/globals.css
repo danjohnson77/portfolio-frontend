@@ -38,6 +38,10 @@ html {
     @apply hover:text-gray-300 transition-all transform hover:scale-125 text-white cursor-pointer tracking-widest duration-200 text-2xl md:text-lg py-12 md:py-0;
   }
 
+  .text-glow {
+    text-shadow: 1px 1px 10px #fff;
+  }
+
   .hover-glow {
     cursor: pointer;
   }
