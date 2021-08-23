@@ -16,9 +16,9 @@ const project = ({ project }) => {
 
   return (
     <div className="panel md:w-10/12 font-subheading px-10 md:px-0 md:py-10">
-      <div className="py-5 md:py-0">
+      <div className="py-5 md:py-0 text-center">
         <h1 className="text-4xl">{title}</h1>
-        <h2 className="text-center text-sm">{subtitle}</h2>
+        <h2 className="text-sm">{subtitle}</h2>
       </div>
       <div className="flex flex-col md:flex-row justify-between w-full items-center">
         <div className="flex md:w-6/12 px-5">

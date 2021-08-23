@@ -108,6 +108,16 @@ const Nav = () => {
                 <i className="fab fa-twitter"></i>
               </li>
             </a>
+            <a
+              href={`mailto:${process.env.CONTACT_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact Me Link"
+            >
+              <li className="nav-item">
+                <i className="fas fa-envelope-open-text"></i>
+              </li>
+            </a>
           </div>
         </ul>
       </div>

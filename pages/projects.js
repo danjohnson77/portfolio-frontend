@@ -15,7 +15,7 @@ const projects = ({ projects }) => {
     <div className="panel p-10 tracking-widest md:w-10/12">
       <SpacedText
         text="PROJECTS"
-        classes="pb-10"
+        classes="py-10 md:pb-10 md:pt-0"
         animateClass="projects-ani"
         alternateAnimation={true}
       />

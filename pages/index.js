@@ -94,10 +94,17 @@ export default function Home() {
             <p className="text-sm">TWITTER</p>
           </div>
         </a>
-        <div className="nav-item-landing">
-          <i className="fas fa-envelope-open-text"></i>
-          <p className="text-sm">CONTACT</p>
-        </div>
+        <a
+          href={`mailto:${process.env.CONTACT_EMAIL}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact Me Link"
+        >
+          <div className="nav-item-landing">
+            <i className="fas fa-envelope-open-text"></i>
+            <p className="text-sm">CONTACT</p>
+          </div>
+        </a>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const SpacedText = ({
     return num % 2;
   };
   return (
-    <div className={`flex justify-between w-full  ${classes}`}>
+    <div className={`flex justify-between w-full ${classes}`}>
       {splitText.map((letter, index) => {
         let output;
         let cssClass = animateClass;
