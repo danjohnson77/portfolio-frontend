@@ -54,39 +54,31 @@ const Nav = () => {
         onClick={() => handleClick()}
       >
         <ul className="flex justify-between flex-col w-full md:flex-row md:w-10/12 items-center">
-          <Link href="/">
-            <li className={`nav-item ${router.asPath === "/" && "text-glow"}`}>
-              HOME
-            </li>
-          </Link>
-          <Link href="/projects">
-            <li
-              className={`nav-item ${
-                router.asPath === "/projects" && "text-glow"
-              }`}
-            >
-              PROJECTS
-            </li>
-          </Link>
-          <Link href="/about">
-            <li
-              className={`nav-item ${
-                router.asPath === "/about" && "text-glow"
-              }`}
-            >
-              ABOUT ME
-            </li>
-          </Link>
-          <div className="flex flex-row justify-between w-36">
+          <li className={`nav-item ${router.asPath === "/" && "text-glow"}`}>
+            <Link href="/">HOME</Link>
+          </li>
+          <li
+            className={`nav-item ${
+              router.asPath === "/projects" && "text-glow"
+            }`}
+          >
+            <Link href="/projects">PROJECTS</Link>
+          </li>
+          <li
+            className={`nav-item ${router.asPath === "/about" && "text-glow"}`}
+          >
+            <Link href="/about">ABOUT ME</Link>
+          </li>
+          <li className="flex flex-row justify-between w-36">
             <a
               href="https://github.com/danjohnson77"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Github Link"
             >
-              <li className="nav-item">
+              <div className="nav-item">
                 <i className="fab fa-github"></i>
-              </li>
+              </div>
             </a>
             <a
               href="https://www.linkedin.com/in/danjohnson77/"
@@ -94,9 +86,9 @@ const Nav = () => {
               rel="noopener noreferrer"
               aria-label="Linked In Link"
             >
-              <li className="nav-item">
+              <div className="nav-item">
                 <i className="fab fa-linkedin"></i>
-              </li>
+              </div>
             </a>
             <a
               href="https://www.twitter.com/dfjdeveloper"
@@ -104,9 +96,9 @@ const Nav = () => {
               rel="noopener noreferrer"
               aria-label="Twitter Link"
             >
-              <li className="nav-item">
+              <div className="nav-item">
                 <i className="fab fa-twitter"></i>
-              </li>
+              </div>
             </a>
             <a
               href={`mailto:${process.env.CONTACT_EMAIL}`}
@@ -114,11 +106,11 @@ const Nav = () => {
               rel="noopener noreferrer"
               aria-label="Contact Me Link"
             >
-              <li className="nav-item">
+              <div className="nav-item">
                 <i className="fas fa-envelope-open-text"></i>
-              </li>
+              </div>
             </a>
-          </div>
+          </li>
         </ul>
       </div>
     </nav>
