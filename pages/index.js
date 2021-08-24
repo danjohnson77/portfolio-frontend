@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="panel md:text-6xl md:w-10/12 w-full min-h-screen md:min-h-0 pt-24 px-10 md:p-10">
+    <div className="panel md:text-6xl md:w-10/12 w-full min-h-screen md:min-h-0 p-24 px-10 md:p-10">
       <SpacedText
         text="DANIEL"
         classes="pb-10 md:w-10/12 mx-auto overflow-hidden"
