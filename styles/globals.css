@@ -17,6 +17,10 @@ html {
   p {
     @apply leading-loose;
   }
+  input,
+  textarea {
+    @apply text-black font-sans;
+  }
 }
 
 @layer components {
@@ -72,5 +76,13 @@ html {
   .about-body > p,
   .project-body > p {
     @apply py-5;
+  }
+
+  .contact-form > label {
+    @apply text-lg flex flex-col py-3 font-subheading;
+  }
+
+  .btn {
+    @apply bg-transparent border-2 text-2xl font-subheading text-white p-3 hover:bg-white hover:text-black transition-all duration-200 cursor-pointer;
   }
 }

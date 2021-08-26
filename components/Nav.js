@@ -69,6 +69,13 @@ const Nav = () => {
           >
             <Link href="/about">ABOUT ME</Link>
           </li>
+          <li
+            className={`nav-item ${
+              router.asPath === "/contact" && "text-glow"
+            }`}
+          >
+            <Link href="/contact">CONTACT</Link>
+          </li>
           <li className="flex flex-row justify-between w-36">
             <a
               href="https://github.com/danjohnson77"
@@ -98,16 +105,6 @@ const Nav = () => {
             >
               <div className="nav-item">
                 <i className="fab fa-twitter"></i>
-              </div>
-            </a>
-            <a
-              href={`mailto:${process.env.CONTACT_EMAIL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Contact Me Link"
-            >
-              <div className="nav-item">
-                <i className="fas fa-envelope-open-text"></i>
               </div>
             </a>
           </li>

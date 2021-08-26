@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="w-full z-50 bg-black text-white text-sm pt-10 pb-2">
@@ -21,14 +23,9 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex">
-          <a
-            href={`mailto:${process.env.CONTACT_EMAIL}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contact Me Link"
-          >
+          <Link href="/contact">
             <p className="underline">&copy; 2021 Daniel Johnson</p>
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
